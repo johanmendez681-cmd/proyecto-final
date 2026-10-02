@@ -15,7 +15,7 @@ function Historial() {
 
   const cargarEventos = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/eventos");
+      const response = await axios.get("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/eventos");
       setEventos(response.data);
     } catch (error) {
       console.error("Error cargando historial:", error);

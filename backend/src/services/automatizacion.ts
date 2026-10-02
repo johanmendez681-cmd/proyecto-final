@@ -8,6 +8,7 @@ export const iniciarAutomatizacion = () => {
   console.log("Motor de automatización iniciado (Zona Horaria Protegida: El Salvador).");
 
   // Los 5 asteriscos garantizan que se ejecute en el segundo 0 de cada minuto exacto
+  // Los 5 asteriscos garantizan que se ejecute en el segundo 0 de cada minuto exacto
   cron.schedule("* * * * *", async () => {
     try {
       // 1. BLINDAJE DE ZONA HORARIA

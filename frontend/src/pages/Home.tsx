@@ -17,7 +17,7 @@ function Home() {
   useEffect(() => {
     const cargarDatos = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/horarios");
+        const response = await axios.get("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios");
         const horarios: Horario[] = response.data;
         
         setEstadoSistema("Conectado");

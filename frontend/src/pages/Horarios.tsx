@@ -25,7 +25,7 @@ function Horarios() {
 
   const cargarHorarios = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/horarios");
+      const response = await axios.get("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios");
       setHorarios(response.data);
     } catch (error) {
       console.error("Error cargando horarios:", error);
@@ -54,14 +54,14 @@ function Horarios() {
 
     try {
       if (editandoId === null) {
-        await axios.post("http://localhost:5000/api/horarios", {
+        await axios.post("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios", {
           nombre,
           hora,
           descripcion,
           activo
         });
       } else {
-        await axios.put(`http://localhost:5000/api/horarios/${editandoId}`, {
+        await axios.put(`[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios/${editandoId}`, {
           nombre,
           hora,
           descripcion,
@@ -92,7 +92,7 @@ function Horarios() {
     if (!confirmar) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/horarios/${id}`);
+      await axios.delete(`[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios/${id}`);
       cargarHorarios();
     } catch (error) {
       console.error("Error eliminando horario:", error);
@@ -102,7 +102,7 @@ function Horarios() {
 
   const cambiarEstado = async (horario: Horario) => {
     try {
-      await axios.put(`http://localhost:5000/api/horarios/${horario.id}`, {
+      await axios.put(`[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/horarios/${horario.id}`, {
         nombre: horario.nombre,
         hora: horario.hora.substring(0, 5),
         descripcion: horario.descripcion,

@@ -11,7 +11,7 @@ function Timbre() {
       setActivando(true);
       setMensaje("");
 
-      const response = await axios.post("http://localhost:5000/api/timbre/sonar");
+      const response = await axios.post("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/timbre/sonar");
       setMensaje(response.data.mensaje);
 
       // Limpiamos el mensaje después de 5 segundos

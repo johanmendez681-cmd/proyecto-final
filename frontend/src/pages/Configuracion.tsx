@@ -18,7 +18,7 @@ function Configuracion() {
 
   const cargarConfiguracion = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/configuracion");
+      const response = await axios.get("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/configuracion");
       const datos: ConfiguracionData[] = response.data;
 
       if (datos.length > 0) {
@@ -51,7 +51,7 @@ function Configuracion() {
       setGuardando(true);
       setMensaje("");
 
-      const response = await axios.put("http://localhost:5000/api/configuracion", {
+      const response = await axios.put("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/configuracion", {
         nombre_institucion: nombreInstitucion.trim(),
         duracion_timbre: duracionTimbre
       });

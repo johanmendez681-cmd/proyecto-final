@@ -18,7 +18,7 @@ function Login({ onLogin }: LoginProps) {
       setCargando(true);
       setError("");
 
-      const response = await axios.post("[https://proyecto-final-f061.onrender.com](https://proyecto-final-f061.onrender.com)/api/auth/login", {
+      const response = await axios.post("https://proyecto-final-f061.onrender.com/api/auth/login", {
         correo,
         password
       });

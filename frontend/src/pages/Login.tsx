@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Bell, Lock, Mail, ArrowRight, BookOpen, GraduationCap, Clock } from "lucide-react";
+import { Bell, Lock, Mail, BookOpen, GraduationCap, Clock } from "lucide-react";
 
 interface LoginProps {
   onLogin: () => void;
